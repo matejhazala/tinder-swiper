@@ -1,5 +1,5 @@
 // filter values for "dislike" / "like with and logic" / "like with or logic", in that order:
-var nopeValues = ['Monogamy', "Smoker", 'Social smoker', 'I want children', "I have children and don't want more", 'Vegan']; // dislike if one of values is found, has priority before like
+var nopeValues = ["Smoker", 'Social smoker']; // dislike if one of values is found, has priority before like
 var likeValues = []; // like if all/any values are found according to selected logic below
 var likeLogic = "and"; // "and" to like if all likeValues are found / "or" to like if any of LikeValues is found
 
@@ -80,7 +80,7 @@ swipe = function(){
                 }
             }
 
-            if (likeLogic === "and" && likeValues.length === whatLike.length) || (liekeLogic === "or" && whatLike.legth > 0) {
+            if ((whatLike.legth > 0) && ((likeLogic === "and" && likeValues.length === whatLike.length) || (likeLogic === "or"))) {
                 like = true;
             }
 
